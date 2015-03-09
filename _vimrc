@@ -56,10 +56,17 @@ set noundofile
 " クリップボード
 set clipboard=unnamed
 
+" エンコード
 set encoding=cp932
-set termencoding=cp932
+set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,cp932
+
+" シンタックス
+syntax on
+highlight Normal ctermbg=black ctermfg=grey
+highlight StatusLine term=none cterm=none ctermfg=black ctermbg=grey
+highlight CursorLine term=none cterm=none ctermfg=none ctermbg=darkgray
 
 ":set encoding=utf-8
 ":set fileencodings=utf-8,cp932ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis
