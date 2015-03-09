@@ -66,3 +66,26 @@ set fileencodings=utf-8,cp932
 :set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/':'%%'
+
+" Neobundle設定
+set nocompatible
+filetype plugin indent off
+
+if has('vim_starting')
+  if &compatible
+    set nocompatible
+  endif
+
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+endif 
+
+call neobundle#begin(expand('~/.vim/bundle'))
+  NeoBundleFetch 'Shougo/neobundle.vim'
+
+  " インストールするプラグインを書く
+"  NeoBundle 'Shougo/unite.vim'
+"  NeoBundle 'Shougo/neosnippet.vim'
+call neobundle#end()
+
+NeoBundleCheck
+filetype plugin indent on
