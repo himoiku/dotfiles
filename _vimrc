@@ -57,10 +57,15 @@ set noundofile
 set clipboard=unnamed
 
 " エンコード
-set encoding=cp932
+set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
-set fileencodings=utf-8,cp932
+set fileencodings=utf-8,cp932ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis
+
+" 非GUI日本語コンソールを使っている場合の設定
+if !has('gui_running') && &encoding != 'cp932' && &term == 'win32'
+  set termencoding=cp932
+endif
 
 " シンタックス
 syntax on
