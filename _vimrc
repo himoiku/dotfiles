@@ -2,7 +2,9 @@
 " 編集に関する設定:
 "
 " タブの画面上での幅
-set tabstop=4
+set tabstop=2
+" インデントの幅
+set shiftwidth=2
 " タブをスペースに展開しない (expandtab:展開する)
 set noexpandtab
 " 自動的にインデントする (noautoindent:インデントしない)
@@ -95,6 +97,8 @@ call neobundle#begin(expand('~/.vim/bundle'))
   NeoBundleFetch 'Shougo/neobundle.vim'
 
   " インストールするプラグインを書く
+  NeoBundle 'tomtom/tcomment_vim'
+  NeoBundle 'tpope/vim-endwise'
 "  NeoBundle 'Shougo/unite.vim'
 "  NeoBundle 'Shougo/neosnippet.vim'
 call neobundle#end()
