@@ -75,6 +75,9 @@ highlight Normal ctermbg=black ctermfg=grey
 highlight StatusLine term=none cterm=none ctermfg=black ctermbg=grey
 highlight CursorLine term=none cterm=none ctermfg=none ctermbg=darkgray
 
+" Golang
+let g:go_fmt_command="goimports"
+
 ":set encoding=utf-8
 ":set fileencodings=utf-8,cp932ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis
 :set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
@@ -99,6 +102,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
   " インストールするプラグインを書く
   NeoBundle 'tomtom/tcomment_vim'
   NeoBundle 'tpope/vim-endwise'
+  NeoBundle 'fatih/vim-go'
 "  NeoBundle 'Shougo/unite.vim'
 "  NeoBundle 'Shougo/neosnippet.vim'
 call neobundle#end()
